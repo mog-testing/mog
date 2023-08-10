@@ -1,12 +1,6 @@
 mog
 ===
 
-[comment]: # [![Version](https://img.shields.io/nuget/vpre/Moq.svg)](https://www.nuget.org/packages/Moq)
-
-[comment]: # [![Downloads](https://img.shields.io/nuget/dt/Moq.svg)](https://www.nuget.org/packages/Moq)
-
-[comment]: # [![Documentation](https://img.shields.io/badge/docs-website-%23fc0)](http://moq.github.io/moq/)
-
 <!-- #content -->
 Fork of the most popular and infamous mocking library for .NET
 
@@ -101,7 +95,6 @@ Moq offers the following features:
 We appreciate deeply any feedback that you may have! Feel free to participate in the [chat], or report an issue in the [issue tracker].
 
  [issue tracker]:
- https://github.com/moq/moq/issues
  https://github.com/mog-testing/mog/issues
- "Moq issue tracker on GitHub"
+ "Mog issue tracker on GitHub"
 
