@@ -1,13 +1,14 @@
-moq
+mog
 ===
 
-[![Version](https://img.shields.io/nuget/vpre/Moq.svg)](https://www.nuget.org/packages/Moq)
-[![Downloads](https://img.shields.io/nuget/dt/Moq.svg)](https://www.nuget.org/packages/Moq)
-[![Documentation](https://img.shields.io/badge/docs-website-%23fc0)](http://moq.github.io/moq/)
-[![Discord Chat](https://img.shields.io/badge/chat-on%20discord-7289DA.svg)](https://discord.gg/8PtpGdu)
+[comment]: # [![Version](https://img.shields.io/nuget/vpre/Moq.svg)](https://www.nuget.org/packages/Moq)
+
+[comment]: # [![Downloads](https://img.shields.io/nuget/dt/Moq.svg)](https://www.nuget.org/packages/Moq)
+
+[comment]: # [![Documentation](https://img.shields.io/badge/docs-website-%23fc0)](http://moq.github.io/moq/)
 
 <!-- #content -->
-The most popular and friendly mocking library for .NET
+Fork of the most popular and infamous mocking library for .NET
 
 ```csharp
   var mock = new Mock<ILoveThisLibrary>();
@@ -26,8 +27,7 @@ The most popular and friendly mocking library for .NET
   mock.Verify(library => library.DownloadExists("2.0.0.0"), Times.AtMostOnce());
 ```
 
-Moq also is the first and only library so far to provide Linq to Mocks, so that the 
-same behavior above can be achieved much more succinctly:
+Linq support:
 
 ```csharp
   ILoveThisLibrary lovable = Mock.Of<ILoveThisLibrary>(l =>
@@ -44,8 +44,7 @@ same behavior above can be achieved much more succinctly:
   Mock.Get(lovable).Verify(library => library.DownloadExists("2.0.0.0"));
 ```
 
-You can think of Linq to Mocks as "from the universe of mocks, give me one whose behavior 
-matches this expression".
+You can think of Linq to Mocks as "from the universe of mocks, give me one whose behavior matches this expression".
 
 Check out the [Quickstart](https://github.com/moq/moq/wiki/Quickstart) for more examples!
 
@@ -54,6 +53,7 @@ Check out the [Quickstart](https://github.com/moq/moq/wiki/Quickstart) for more 
 ## What?
 
 Moq (pronounced "Mock-you" or just "Mock") is the only mocking library for .NET developed from scratch to take full advantage of .NET Linq expression trees and lambda expressions, which makes it the most productive, type-safe and refactoring-friendly mocking library available. And it supports mocking interfaces as well as classes. Its API is extremely simple and straightforward, and doesn't require any prior knowledge or experience with mocking concepts.
+Mog is just like Moq, but at the same time it respects its users' privacy.
 
 ## Why?
 
@@ -67,6 +67,8 @@ Not using Record/Replay also means that it's straightforward to move common expe
 
 You can read more about the "why" and see some nice screenshots at [kzu's blog](https://web.archive.org/web/20200920164302/http://blogs.clariusconsulting.net/kzu/why-do-we-need-yet-another-net-mocking-framework/).
 
+Mog was created to avoid SponsorLink additions to Moq.
+
 ## Where?
 
 See our [Quickstart](https://github.com/moq/moq/wiki/Quickstart) examples to get a feeling of the extremely simple API and install from [NuGet](http://nuget.org/packages/moq).
@@ -74,7 +76,6 @@ See our [Quickstart](https://github.com/moq/moq/wiki/Quickstart) examples to get
 Read about the announcement at [kzu's blog](https://web.archive.org/web/20201130233544/http://blogs.clariusconsulting.net/kzu/linq-to-mock-moq-is-born/). Get some background on [the state of mock libraries from Scott Hanselman](http://www.hanselman.com/blog/MoqLinqLambdasAndPredicatesAppliedToMockObjects.aspx).
 
 In-depth documentation is being added to the [documentation website](http://moq.github.io/moq/).
-
 
 ## Who?
 
@@ -99,36 +100,8 @@ Moq offers the following features:
 
 We appreciate deeply any feedback that you may have! Feel free to participate in the [chat], or report an issue in the [issue tracker].
 
- [chat]:
- https://discord.gg/8PtpGdu
- "Moq channel on Discord"
-
  [issue tracker]:
  https://github.com/moq/moq/issues
+ https://github.com/mog-testing/mog/issues
  "Moq issue tracker on GitHub"
 
-<!-- #features -->
-<!-- #sponsors -->
-
-![Sponsors](https://raw.githubusercontent.com/devlooped/sponsors/main/assets/sponsors.svg) Sponsors
-============
-
-Special thanks to the following gold sponsors of this project:
-
-[![Supported by Amazon Web Services](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/aws.png "Supported by Amazon Web Services")](https://github.com/aws)
-[![Supported by Clarius](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/clarius.png "Supported by Clarius")](https://github.com/clarius)
-
-And to all our sponsors!
-
-<!-- include https://github.com/devlooped/sponsors/raw/main/sponsors.md -->
-[![Clarius Org](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/clarius.png "Clarius Org")](https://github.com/clarius)
-[![C. Augusto Proiete](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/augustoproiete.png "C. Augusto Proiete")](https://github.com/augustoproiete)
-[![Kirill Osenkov](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/KirillOsenkov.png "Kirill Osenkov")](https://github.com/KirillOsenkov)
-[![MFB Technologies, Inc.](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/MFB-Technologies-Inc.png "MFB Technologies, Inc.")](https://github.com/MFB-Technologies-Inc)
-[![SandRock](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/sandrock.png "SandRock")](https://github.com/sandrock)
-[![Andy Gocke](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/agocke.png "Andy Gocke")](https://github.com/agocke)
-[![Stephen Shaw](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/decriptor.png "Stephen Shaw")](https://github.com/decriptor)
-[![Torutek](https://raw.githubusercontent.com/devlooped/sponsors/main/.github/avatars/torutek-gh.png "Torutek")](https://github.com/torutek-gh)
-
-
-<!-- https://github.com/devlooped/sponsors/raw/main/sponsors.md -->
